@@ -125,11 +125,17 @@ We recommend downloading a release tarball, which you can find on
 `sourceforge.net <http://sourceforge.net/projects/munin/files/stable/>`_.
 
 Alternatively, if you want to hack on Munin, you should clone our git
-repository by doing.
+repository by doing this if you have a github.com account:
 
 .. code-block:: bash
 
- git clone git://github.com/munin-monitoring/munin
+ git clone git@github.com:munin-monitoring/munin.git
+ 
+or this if you don't have a github.com account:
+
+.. code-block:: bash
+
+ git clone https://github.com/munin-monitoring/munin
 
 Please note that a git checkout will need some more build-dependencies
 than listed below, in particular the Python Docutils and Sphinx.
