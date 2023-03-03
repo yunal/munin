@@ -13,9 +13,15 @@ munin-update is the primary Munin component. It is run from the
 :ref:`munin-cron` script.
 
 This script is responsible for contacting all the agents
-(munin-nodes) and collecting their data. Upon fetching the data,
-munin-update stores everything in RRD files - one RRD files for
-each field in each plugin.
+(munin-nodes) and collecting their data.
+
+The nodes are listed in :ref:`munin.conf`. Munin-update will, by
+default, fork one process off for each node it collects data from,
+up to a maximum set by `max_processes`.
+
+Upon fetching the data, munin-update stores everything in RRD
+files - one RRD files for each field in each plugin.  In munin 3
+it also updates a SQLite database with the state of every node.
 
 Running munin-update with the --debug flag will often give plenty
 of hints on what might be wrong.
@@ -70,4 +76,4 @@ SEE ALSO
 
 See :ref:`munin` for an overview over munin.
 
-:ref:`munin-cron`
+:ref:`munin-cron`, :ref:`munin.conf`
